@@ -1,0 +1,17 @@
+pg_sync_subscribe_config:
+  pgDumpPath: 'D:\lagouStudy\pg-sync-hijacker\hijacker-server\src\main\resources\public_dump.sql'
+  subscribes:
+    - slotName: test_slot27
+      pgConnConf:
+        host: 192.168.47.145
+        port: 5432
+        database: postgres
+        user: postgres
+        password: postgres
+      rules:
+#        - {table: 'user', keys: ['id'],columns:['name'], topic: 'demo_one'}
+        - {table: 'user', keys: ['id'], topic: 'topic_three'}
+      kafkaConf:
+        addrs:
+          - 192.168.47.145:9092
+pg_sync_zookeeper_address: 192.168.47.145:2181

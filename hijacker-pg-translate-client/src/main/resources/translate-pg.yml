@@ -1,0 +1,12 @@
+#- source-table: '"public"."user"' # 源表名
+#  source-field: name,hobby  # 源表需要翻译字段名，多个逗号隔开
+#  target-table:  '"public"."person"' # 写入表名
+#  target-field: name,hobby # 写入表名字段， 多个逗号隔开，与source_field一一对应
+#  type: en2zh # zh2en 中文翻译到英文， en2zh 英文翻译到中文
+#  describe:   # 源表与目标表关系描述，如user.id = person.pid
+#    id : id
+#- source-table: public.user
+#  source-field: name
+#  target-table: public.user
+#  target-field: name2
+#  type: zh2en
